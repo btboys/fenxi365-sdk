@@ -1,0 +1,72 @@
+import com.vanniktech.maven.publish.SonatypeHost
+
+plugins {
+    id "java-library"
+    id "com.vanniktech.maven.publish" version "0.32.0"
+}
+
+group = 'com.fenxi365' // 替换为你的命名空间
+version = '1.0.7' // 替换为你的版本号
+
+dependencies {
+    api(project(":api:model"))
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+    implementation 'cn.hutool:hutool-json:5.8.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+}
+
+jar {
+    archivesBaseName = 'fenxi365-open-sdk'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+tasks.withType(Jar).configureEach {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+mavenPublishing {
+    coordinates("com.fenxi365", "fenxi365-open-sdk", "1.0.7")
+
+    pom {
+        name = "fenxi365-open-sdk"
+        description = "分析云开放平台SDK"
+        inceptionYear = "2025"
+        url = "https://fenxi365.com/"
+        licenses {
+            license {
+                name = "The Apache License, Version 2.0"
+                url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
+                distribution = "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        }
+        developers {
+            developer {
+                id = "fenxi365"
+                name = '纷析云（杭州）科技有限公司'
+                email = 'guohua@fenxi365.com'
+                url = 'https://github.com/btboys'
+            }
+        }
+        scm {
+            url.set("https://github.com/btboys/fenxi365-sdk/")
+            connection.set("scm:git:git://github.com/btboys/fenxi365-sdk.git")
+            developerConnection.set("scm:git:ssh://git@github.com/btboys/fenxi365-sdk.git")
+        }
+    }
+
+    signAllPublications()
+
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, true)
+}

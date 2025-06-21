@@ -1,0 +1,19 @@
+-Xdoclint:none '-quiet'
+-classpath '/Users/gson/IdeaProjects/fxy-open/api/sdk/build/classes/java/main:/Users/gson/IdeaProjects/fxy-open/api/sdk/build/resources/main:/Users/gson/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.32/17d46b3e205515e1e8efd3ee4d57ce8018914163/lombok-1.18.32.jar:/Users/gson/IdeaProjects/fxy-open/api/model/build/classes/java/main:/Users/gson/.m2/repository/com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.jar:/Users/gson/.gradle/caches/modules-2/files-2.1/cn.hutool/hutool-json/5.8.16/bfbc587d1626011fe600079299fe83780670994f/hutool-json-5.8.16.jar:/Users/gson/.m2/repository/com/squareup/okio/okio/3.6.0/okio-3.6.0.jar:/Users/gson/.m2/repository/com/squareup/okio/okio-jvm/3.6.0/okio-jvm-3.6.0.jar:/Users/gson/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.9.10/kotlin-stdlib-jdk8-1.9.10.jar:/Users/gson/.gradle/caches/modules-2/files-2.1/cn.hutool/hutool-core/5.8.16/cc706c4e3a9971d0e1af406cd7ca7d702919c9fd/hutool-core-5.8.16.jar:/Users/gson/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.9.10/bc5bfc2690338defd5195b05c57562f2194eeb10/kotlin-stdlib-jdk7-1.9.10.jar:/Users/gson/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.9.10/72812e8a368917ab5c0a5081b56915ffdfec93b7/kotlin-stdlib-1.9.10.jar:/Users/gson/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.10/kotlin-stdlib-common-1.9.10.jar:/Users/gson/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar'
+-d '/Users/gson/IdeaProjects/fxy-open/api/sdk/build/docs/javadoc'
+-doctitle 'sdk 1.0.7 API'
+-html5 
+-notimestamp 
+-quiet 
+-windowtitle 'sdk 1.0.7 API'
+'/Users/gson/IdeaProjects/fxy-open/api/sdk/src/main/java/com/fenxi365/api/tax/GjServer.java'
+'/Users/gson/IdeaProjects/fxy-open/api/sdk/src/main/java/com/fenxi365/api/tax/InvoiceRedServer.java'
+'/Users/gson/IdeaProjects/fxy-open/api/sdk/src/main/java/com/fenxi365/api/tax/MultiaccServer.java'
+'/Users/gson/IdeaProjects/fxy-open/api/sdk/src/main/java/com/fenxi365/api/tax/QdfpServer.java'
+'/Users/gson/IdeaProjects/fxy-open/api/sdk/src/main/java/com/fenxi365/api/tax/LoginServer.java'
+'/Users/gson/IdeaProjects/fxy-open/api/sdk/src/main/java/com/fenxi365/api/tax/TaxOrgServer.java'
+'/Users/gson/IdeaProjects/fxy-open/api/sdk/src/main/java/com/fenxi365/api/Fenxi365Client.java'
+'/Users/gson/IdeaProjects/fxy-open/api/sdk/src/main/java/com/fenxi365/api/Fenxi365.java'
+'/Users/gson/IdeaProjects/fxy-open/api/sdk/src/main/java/com/fenxi365/api/Result.java'
+'/Users/gson/IdeaProjects/fxy-open/api/sdk/src/main/java/com/fenxi365/api/exception/Fenxi365ClientException.java'
+'/Users/gson/IdeaProjects/fxy-open/api/sdk/src/main/java/com/fenxi365/api/open/OpenServer.java'

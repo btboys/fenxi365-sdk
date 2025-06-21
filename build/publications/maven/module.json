@@ -1,0 +1,112 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.fenxi365",
+    "module": "fenxi365-open-sdk",
+    "version": "1.0.7",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.fenxi365",
+          "module": "fenxi365-open-model",
+          "version": {
+            "requires": "1.0.7"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fenxi365-open-sdk-1.0.7.jar",
+          "url": "fenxi365-open-sdk-1.0.7.jar",
+          "size": 22785,
+          "sha512": "aab3dabfe58e77055d623aebb37ce509a4e587efffa8436ce3ce1da69e8f96fb6341b1d5a17b462b686baf30f5fa456632eb5626111cddd4a9d0c527788d4a61",
+          "sha256": "ddebdf4bcdb95d98d739bc1a5098428869e6c8d0240d27fd03b16229c62fa410",
+          "sha1": "2da3cec8c518109daf3c3b79a72df9dfb1ed11e5",
+          "md5": "c41f7979552561630ea48918a0c6bbf2"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "okhttp",
+          "version": {
+            "requires": "4.12.0"
+          }
+        },
+        {
+          "group": "cn.hutool",
+          "module": "hutool-json",
+          "version": {
+            "requires": "5.8.16"
+          }
+        },
+        {
+          "group": "com.fenxi365",
+          "module": "fenxi365-open-model",
+          "version": {
+            "requires": "1.0.7"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fenxi365-open-sdk-1.0.7.jar",
+          "url": "fenxi365-open-sdk-1.0.7.jar",
+          "size": 22785,
+          "sha512": "aab3dabfe58e77055d623aebb37ce509a4e587efffa8436ce3ce1da69e8f96fb6341b1d5a17b462b686baf30f5fa456632eb5626111cddd4a9d0c527788d4a61",
+          "sha256": "ddebdf4bcdb95d98d739bc1a5098428869e6c8d0240d27fd03b16229c62fa410",
+          "sha1": "2da3cec8c518109daf3c3b79a72df9dfb1ed11e5",
+          "md5": "c41f7979552561630ea48918a0c6bbf2"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "fenxi365-open-sdk-1.0.7-sources.jar",
+          "url": "fenxi365-open-sdk-1.0.7-sources.jar",
+          "size": 16397,
+          "sha512": "3a157e66e3d7882b1af0595f406d168237adb9330fc8faa6ec540b3c919ce842e3f47ec4b82ba6cc95f8e00fb2927e88ed49f9297f863590dc7eef6c69ca5c7d",
+          "sha256": "9092026bd29c4beb05f9061203a86d135c1a8b5081abb4ee74a0cba649cda7d3",
+          "sha1": "e1f26e1e367c4c3faf4280f6d6c1b90dc31accbd",
+          "md5": "ac2633669cdde1e9253135204956da75"
+        }
+      ]
+    }
+  ]
+}
