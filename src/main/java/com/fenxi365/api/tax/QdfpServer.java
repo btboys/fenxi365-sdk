@@ -4,7 +4,14 @@ import cn.hutool.json.JSONUtil;
 import com.fenxi365.api.Fenxi365Client;
 import com.fenxi365.api.Result;
 import com.fenxi365.open.model.dto.*;
+import com.fenxi365.open.model.dto.invoice.qdfp.KptjxxcxDto;
+import com.fenxi365.open.model.dto.invoice.qdfp.QueryFphcztxxDto;
+import com.fenxi365.open.model.dto.invoice.qdfp.QyjbxxcxDto;
 import com.fenxi365.open.model.vo.*;
+import com.fenxi365.open.model.vo.invoice.qdfp.KptjxxcxVo;
+import com.fenxi365.open.model.vo.invoice.qdfp.QueryFphcztxxVo;
+import com.fenxi365.open.model.vo.invoice.qdfp.QueryFpsljeseHjVo;
+import com.fenxi365.open.model.vo.invoice.qdfp.QyjbxxcxVo;
 
 /**
  *  com.fenxi365.api.tax
@@ -96,5 +103,37 @@ public class QdfpServer {
      */
     public Result<Boolean> smsc(SmscVo smscVo) {
         return this.client.execute("/api/tax/invoice/qdfp/smsc", JSONUtil.toJsonStr(smscVo), () -> Boolean.class);
+    }
+
+    /**
+     * 获取企业基本信息
+     * 通过本接口获取当前登录的企业基本信息
+     */
+    public Result<QyjbxxcxDto> qyjbxxcx(QyjbxxcxVo qyjbxxcxVo) {
+        return this.client.execute("/api/tax/invoice/qdfp/qyjbxxcx", JSONUtil.toJsonStr(qyjbxxcxVo), () -> QyjbxxcxDto.class);
+    }
+
+    /**
+     * 获取开票统计信息
+     * 通过本接口获取当前登录的企业发票统计信息
+     */
+    public Result<KptjxxcxDto> kptjxxcx(KptjxxcxVo kptjxxcxVo) {
+        return this.client.execute("/api/tax/invoice/qdfp/kptjxxcx", JSONUtil.toJsonStr(kptjxxcxVo), () -> KptjxxcxDto.class);
+    }
+
+    /**
+     * 全量发票汇总信息
+     * 从局端查询符合指定条件的发票汇总信息，包括发票总张数，合计金额，合计税额。
+     */
+    public Result<com.fenxi365.open.model.dto.invoice.qdfp.QueryFpsljeseHjDto> queryFpsljeseHj(QueryFpsljeseHjVo queryFpsljeseHjVo) {
+        return this.client.execute("/api/tax/invoice/qdfp/queryFpsljeseHj", JSONUtil.toJsonStr(queryFpsljeseHjVo), () -> com.fenxi365.open.model.dto.invoice.qdfp.QueryFpsljeseHjDto.class);
+    }
+
+    /**
+     * 蓝票可红冲信息
+     * 查询蓝字发票红冲信息查询。
+     */
+    public Result<QueryFphcztxxDto> queryFphcztxx(QueryFphcztxxVo queryFphcztxxVo) {
+        return this.client.execute("/api/tax/invoice/qdfp/queryFphcztxx", JSONUtil.toJsonStr(queryFphcztxxVo), () -> QueryFphcztxxDto.class);
     }
 }

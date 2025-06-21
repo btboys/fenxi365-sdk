@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.fenxi365' // 替换为你的命名空间
-version = '1.0.7' // 替换为你的版本号
+version = '1.0.8' // 替换为你的版本号
 
 dependencies {
     api(project(":api:model"))
@@ -37,7 +37,7 @@ tasks.withType(Jar).configureEach {
 }
 
 mavenPublishing {
-    coordinates("com.fenxi365", "fenxi365-open-sdk", "1.0.7")
+    coordinates("com.fenxi365", "fenxi365-open-sdk", "1.0.8")
 
     pom {
         name = "fenxi365-open-sdk"
