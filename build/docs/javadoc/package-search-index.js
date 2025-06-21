@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"com.fenxi365.api"},{"l":"com.fenxi365.api.exception"},{"l":"com.fenxi365.api.open"},{"l":"com.fenxi365.api.tax"},{"l":"所有程序包","u":"allpackages-index.html"}];updateSearchResults();
