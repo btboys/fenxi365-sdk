@@ -54,8 +54,10 @@ public class Fenxi365Client implements Fenxi365 {
         this.appId = appId;
         this.secretKey = secretKey;
         this.httpClient = new OkHttpClient.Builder()
-                .connectTimeout(Duration.ofSeconds(120))
-                .callTimeout(Duration.ofSeconds(120))
+                .connectTimeout(Duration.ofMinutes(2))
+                .readTimeout(Duration.ofMinutes(2))
+                .writeTimeout(Duration.ofMinutes(10))
+                .callTimeout(Duration.ofMinutes(2))
                 .eventListener(new EventListener() {
                     private final Logger log = Logger.getLogger(Fenxi365Client.class.getName());
                     private final ThreadLocal<Long> startTime = new ThreadLocal<>();
